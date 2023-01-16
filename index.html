@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>To Do</title>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-title">
+        <div id="header-title-div">
+        <h1>TODO</h1>
+        <div class="background-display">
+            <img src="images/icon-sun.svg" id="icon-display" alt="">
+        </div>
+        </div>
+        <div id="todo-action">
+            <ul>
+            <li id="check-div-top"> 
+                <div type="checkbox" name="" id="checkbox-top">
+                    <img id="checkbox-image-top" src="" alt="">
+                </div> 
+            </li>
+            <li>
+                <form action="">
+                <input type="text" name="" id="text-box" placeholder="Create a new todo.." value=""></li>
+                <input type="submit" value="Add" id="add">
+            </form>
+           
+        </ul>
+        </div> 
+    </div>
+    </header>
+
+
+    <div id="todo-box">
+    <div id="todo-reminder">
+        <ul class="remind">
+            <li id="adtoit" class="check-div">
+        <div class="checkbox">
+            <img class="checkbox-image" src="" alt="">
+        </div>
+        <p class="paste-todo">No activity</p>
+    </li>
+</ul>
+<ul id="todo-reminder2">
+
+</ul>
+    </div>
+    <div id="nav-actions">
+     
+        <div id="dynamic-number-div">
+            <span id="dynamic-number" style="margin-right: 4px;"></span><span>items left</span>
+        </div>
+        <div id="todo-options">
+            <ul>
+                <li><span id="all-number" style="margin-right: 4px;"></span> All</li>
+                <li><span id=""></span>Active</li>
+                <li><span id=""></span>Completed</li>
+            </ul>
+        </div>
+        <div id="clear-div">
+            <p>  Clear Completed</p>
+        </div>
+    </div>
+</div>
+
+    <div id="drag">
+        Drag and drop to reorder list
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script>
+        // $(document).ready(function(){
+          //  $('.background-display').on('click', ()=>{
+            //    const $myImage = $('#icon-display')
+              //  if($myImage.src === 'images/icon-sun.svg'){
+                //    console.log('welcome')
+               // $(this).attr('src', 'images/icon-moon.svg')  
+          //  }//else{
+          //      $(this).attr('src', 'images/icon-sun.svg') 
+        //    }
+           // })
+      //  }) 
+    </script>
+</body>
+</html>
