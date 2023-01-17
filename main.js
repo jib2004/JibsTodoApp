@@ -89,7 +89,7 @@ textBox.onkeyup = () =>{
 
 const impotantDetails = (li,check,arr) =>{
     li = document.querySelectorAll('li')
-    
+   // check = document.querySelector(".can") 
     if(check.type === 'text'){
         check.type = 'checkbox'
         
@@ -113,17 +113,21 @@ document.querySelector('form').onsubmit = () =>{
     const li = document.createElement('li')
     ulAdd.append(li)
     let  check = document.createElement('input')
-    li.appendChild(check)
+    li.appendChild(check).classList.add('can')
     let p = document.createElement('p')
     p.innerText = task
-    li.appendChild(p)
+    li.appendChild(p).classList.add('p_remind')
     let arr = Array.from(ulAdd.children)
     let all = document.getElementById('all-number')
 //    console.log(arr)
     all.innerText = Number(arr.length) - 1
-    input.forEach(i=>{
-        i.classList.add('can')
-    })
+    // input.forEach(i=>{
+    //     if(i.type === "checkbox"){
+    //         i.classList.add('can')
+    //     }
+     
+        
+    // })
 
     textBox.value = ""
 
@@ -133,16 +137,21 @@ document.querySelector('form').onsubmit = () =>{
     return false;
 }
 
-
-
- const tick = () =>{
-    let check =document.querySelectorAll('.can')
-    check.forEach(t=>{
-        if(t.checked === true){
-            console.log('clicked')
-        }
+let check =document.querySelectorAll('.can')
+check.forEach(i =>{
+    i.addEventListener('click',()=>{
+        console.log('Clicked')
     })
-     impotantDetails(li,check,arr)
- }
+})
 
- tick();
+//  const tick = () =>{
+//     let check =document.querySelectorAll('.can')
+//     check.forEach(t=>{
+//         if(t.checked === true){
+//             console.log('clicked')
+//         }
+//     })
+//      impotantDetails(check)
+//  }
+
+//  tick();
