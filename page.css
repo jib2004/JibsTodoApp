@@ -316,10 +316,16 @@ input[type="checkbox"]{
     left: 45%;
 }
 
-@media(max-width:580px) {
+@media(max-width:580px ) and (min-width:300px) {
     body{
         overflow-x: hidden;
     }
+    header{
+        width: 100%;
+    }
+    /* .header-title{
+
+    } */
     #text-box{
         width: 25em;
     }
@@ -338,21 +344,31 @@ input[type="checkbox"]{
         margin-left: 0;
         font-size: medium;
     }
+    .can{
+        margin-right:10px;
+    }
     .checkbox{
         width: 100%;
         
     }
     #nav-actions{
         width: 100%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
      #todo-options{
         display: flex;
         position: relative;
+        background-color: hsl(235, 19%, 35%);
+        box-shadow: -1px 10px 15px black ;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        /* border-top-left-radius: 5px; */
+        /* border-top-right-radius: 5px; */
+        z-index: 2;
         top: 100px;
         bottom: 20%;
         left: 20px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
        margin-bottom: 10px;
         flex-basis: 10%;	
     } 
@@ -365,18 +381,24 @@ input[type="checkbox"]{
 
     #dynamic-number-div{
         flex-basis: 40%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
 
 
     }
     #clear-div{
         flex-basis: 60%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
 
     }
 
     #drag{
+        
+        display: flex;
+        position: relative;
+        top: 100px;
+        bottom: 20%;
         left: 30%;
+        /* border: 1px solid red; */
     }
 }
 

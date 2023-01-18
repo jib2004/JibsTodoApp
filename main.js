@@ -50,28 +50,6 @@ checkTopDiv.onclick = () =>{
 } 
 }
 
-//Code to be able to click on the div
-
-// checkDiv.forEach(check => {
-//     check.addEventListener('click', ()=>{
-//        const checkboxImage = document.querySelectorAll('.checkbox-image')
-
-//        checkboxImage.forEach(Image =>{
-//          let callImage =   Image.getAttribute('src')
-//      if (callImage === ""){
-//         console.log('cacs')
-//      Image.setAttribute('src', 'images/icon-check.svg')
-//      checkBox.forEach(adjust =>{
-//         adjust.setAttribute('padding', '5px');
-//      })
-//  }  else{
-//      Image.setAttribute('src', '')
-
-// } 
-//        })
-     
-//     })
-// })
 
 //Disables the button
 document.querySelector("#add").disabled = true;
@@ -117,17 +95,13 @@ document.querySelector('form').onsubmit = () =>{
     let p = document.createElement('p')
     p.innerText = task
     li.appendChild(p).classList.add('p_remind')
+    // let img = document.createElement('img')
+    // li.appendChild(img).src('images/icon-cross.svg')
     let arr = Array.from(ulAdd.children)
     let all = document.getElementById('all-number')
 //    console.log(arr)
     all.innerText = Number(arr.length) - 1
-    // input.forEach(i=>{
-    //     if(i.type === "checkbox"){
-    //         i.classList.add('can')
-    //     }
-     
-        
-    // })
+
 
     textBox.value = ""
 
