@@ -152,6 +152,7 @@ border-bottom-left-radius: 5px;
 
 }
 .remind li {
+    display: flex;
      border: 1px solid #808080 ; 
      padding: 5px 10px;
     position: relative;
@@ -169,8 +170,9 @@ border-bottom-left-radius: 5px;
 }
 /* .can{} */
 .p_remind{
-    position: absolute;
-    top: 28%;
+    /* position: absolute; */
+    width: 300px;
+    /* top: 28%; */
 }
 
 input[type="checkbox"]{
@@ -206,6 +208,12 @@ input[type="checkbox"]{
         left: 5px; /* adjust the position of the image */
       }
 
+.close-img{
+    border: 1px solid red;
+    position: absolute;
+    top: 28%;
+    right: 10px;
+}
 /* .remind li */
  /* input[type="checkbox"]{
     position: absolute;
@@ -311,8 +319,10 @@ input[type="checkbox"]{
     color: hsl(236, 9%, 61%);
     /* border: 1px solid red; */
     width: max-content;
-    position:absolute ;
-    bottom: 20%;
+    display: flex;
+    position: relative;
+    top: 100px;
+    bottom:0;
     left: 45%;
 }
 

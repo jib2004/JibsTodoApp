@@ -7,8 +7,9 @@ const addButton = document.getElementById('add-button')
 const checkTopBox = document.getElementById('checkbox-top')
 const checkTopDiv = document.getElementById('check-div-top')
 const ulAdd = document.getElementById('todo-reminder').firstElementChild;
-
+const RemoveLi = document.querySelectorAll('.close-img')
 //console.log(ulAdd)
+
 backgroundDisplay.addEventListener('click', ()=>{
     change()
 })
@@ -92,14 +93,29 @@ document.querySelector('form').onsubmit = () =>{
     ulAdd.append(li)
     let  check = document.createElement('input')
     li.appendChild(check).classList.add('can')
+    check.addEventListener('click', ()=>{
+        if(check.checked == false){
+            check.checked = true
+            console.log('Check')
+         }else{
+             check.checked = false
+         }
+    })
+  
+
     let p = document.createElement('p')
     p.innerText = task
     li.appendChild(p).classList.add('p_remind')
-    // let img = document.createElement('img')
-    // li.appendChild(img).src('images/icon-cross.svg')
+     let img = document.createElement('img')
+     img.classList.add("close-img")
+     li.appendChild(img).src = 'images/icon-cross.svg'
+     img.addEventListener('click',()=>{
+        console.log('click')
+     })   
+     
     let arr = Array.from(ulAdd.children)
     let all = document.getElementById('all-number')
-//    console.log(arr)
+    console.log(arr)
     all.innerText = Number(arr.length) - 1
 
 
@@ -129,3 +145,9 @@ check.forEach(i =>{
 //  }
 
 //  tick();
+
+// RemoveLi.forEach(t=>{
+//     t.addEventListener('click' ,()=>{
+//         console.log('Clicked')
+//     })
+// })
