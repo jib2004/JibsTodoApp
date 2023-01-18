@@ -116,9 +116,13 @@ border-bottom-left-radius: 5px;
 }
 
 #todo-box{
-    position: absolute;
+    /* position: absolute;
     left: 30em;
-    top:30%;   
+    top:30%;    */
+    position: relative;
+    top: -60px;
+    width: fit-content;    
+    margin: 0 auto;
     background-color: hsl(235, 19%, 35%);
     box-shadow: -1px 10px 15px  ;
     border-bottom-left-radius: 5px;
@@ -270,7 +274,7 @@ input[type="checkbox"]{
 #dynamic-number-div{
     padding-top: 10px;
     flex-basis: 25%;
-    cursor: pointer;
+    /* cursor: pointer; */
     padding-left: 5px;
 }
 
@@ -289,13 +293,16 @@ input[type="checkbox"]{
 
 #todo-options ul li{
     margin-right: 10px;
-    cursor: pointer;
-   
+    cursor: pointer; 
+}
+
+#todo-options ul li:hover{
+    color: hsl(220, 98%, 61%);
 }
 
 #clear-div{
     flex-basis: 25%;
-    cursor: pointer;
+    /* cursor: pointer; */
     padding-top: 10px;
 
 }
@@ -305,6 +312,71 @@ input[type="checkbox"]{
     /* border: 1px solid red; */
     width: max-content;
     position:absolute ;
-    bottom: 10%;
+    bottom: 20%;
     left: 45%;
 }
+
+@media(max-width:580px) {
+    body{
+        overflow-x: hidden;
+    }
+    #text-box{
+        width: 25em;
+    }
+    #todo-box{
+        width: 25em;
+    }
+    #todo-reminder{
+        width: 25em;
+        margin-right: 0;
+    }
+     #adtoit{
+        width: 100% !important;
+        padding: 0;
+    }
+    #todo-reminder li p{
+        margin-left: 0;
+        font-size: medium;
+    }
+    .checkbox{
+        width: 100%;
+        
+    }
+    #nav-actions{
+        width: 100%;
+        border: 1px solid red;
+    }
+     #todo-options{
+        display: flex;
+        position: relative;
+        top: 100px;
+        bottom: 20%;
+        left: 20px;
+        border: 1px solid red;
+       margin-bottom: 10px;
+        flex-basis: 10%;	
+    } 
+
+    /* #todo-options ul{
+        
+        position: relative;
+      
+    } */
+
+    #dynamic-number-div{
+        flex-basis: 40%;
+        border: 1px solid red;
+
+
+    }
+    #clear-div{
+        flex-basis: 60%;
+        border: 1px solid red;
+
+    }
+
+    #drag{
+        left: 30%;
+    }
+}
+
