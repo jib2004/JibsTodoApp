@@ -84,6 +84,7 @@ const impotantDetails = (li,check,arr) =>{
 document.querySelector('form').onsubmit = () =>{
     let liToRemove = document.querySelector('.check-div')
     liToRemove.style.display = 'none';  
+   
 
     const input = document.querySelectorAll('input')
 
@@ -93,14 +94,14 @@ document.querySelector('form').onsubmit = () =>{
     ulAdd.append(li)
     let  check = document.createElement('input')
     li.appendChild(check).classList.add('can')
-    check.addEventListener('click', ()=>{
-        if(check.checked == false){
-            check.checked = true
-            console.log('Check')
-         }else{
-             check.checked = false
-         }
-    })
+    // check.addEventListener('click', ()=>{
+    //     if(check.checked == false){
+    //         check.checked = true
+    //         console.log('Check')
+    //      }//else{
+    //     //      check.checked = false
+    //     //  }
+    // })
   
 
     let p = document.createElement('p')
@@ -109,15 +110,27 @@ document.querySelector('form').onsubmit = () =>{
      let img = document.createElement('img')
      img.classList.add("close-img")
      li.appendChild(img).src = 'images/icon-cross.svg'
-     img.addEventListener('click',()=>{
-        console.log('click')
-     })   
+    
      
     let arr = Array.from(ulAdd.children)
+    arr.shift()
     let all = document.getElementById('all-number')
     console.log(arr)
-    all.innerText = Number(arr.length) - 1
+    //  arr.length++
+    all.innerText = Number(arr.length) + 0
+    img.addEventListener('click',(e)=>{
+        li.style.display = 'none'
+        all.innerText = Number(arr.length) - 1
+        let clickedElement = e.target;
+        if (clickedElement.classList.contains("can")) {
+            arr = arr.filter(x => x !== Number(clickedElement.innerText));
+            clickedElement.remove();
+        }
 
+
+
+
+   })   
 
     textBox.value = ""
 
