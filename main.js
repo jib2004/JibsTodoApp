@@ -119,9 +119,9 @@ document.querySelector('form').onsubmit = () =>{
     //  arr.length++
     all.innerText = Number(arr.length) + 0
     img.addEventListener('click',(e)=>{
-        li.style.display = 'none'
+        li.style.display = 'none'    
         li.remove()
-        all.innerText = Number(arr.length) - 1
+        // all.innerText = Number(arr.length) - 1
         // let clickedElement = e.target;
         // if (clickedElement.classList.contains("can")) {
         //     arr = arr.filter(x => x !== Number(clickedElement.innerText));
