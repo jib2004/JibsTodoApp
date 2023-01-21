@@ -115,14 +115,29 @@ document.querySelector('form').onsubmit = () =>{
     let arr = Array.from(ulAdd.children)
     arr.shift()
     let all = document.getElementById('all-number')
-    console.log(arr)
+    //console.log(arr)
     //  arr.length++
-    all.innerText = Number(arr.length) + 0
+    all.innerText = Number(arr.length) 
     img.addEventListener('click',(e)=>{
         li.style.display = 'none'    
         li.remove()
+
+         for(let i = 0; i < arr.length; i++){
+          
+           if(arr.length > 0){
+             arr.splice(i,1)
+             console.log(arr.length)
+            all.innerText = Number(arr.length) - 0
+            if(all.innerText == 0){
+                return liToRemove.style.display = 'flex'
+            }
+           }
+          
+            
+         }
         // all.innerText = Number(arr.length) - 1
-        // let clickedElement = e.target;
+         //let clickedElement = e.target;
+         
         // if (clickedElement.classList.contains("can")) {
         //     arr = arr.filter(x => x !== Number(clickedElement.innerText));
         //     clickedElement.remove();
