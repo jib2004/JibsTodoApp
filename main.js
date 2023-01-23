@@ -110,6 +110,7 @@ document.querySelector('form').onsubmit = () =>{
      let img = document.createElement('img')
      img.classList.add("close-img")
      li.appendChild(img).src = 'images/icon-cross.svg'
+     img.style.display = 'block'
     
      
     let arr = Array.from(ulAdd.children)
@@ -119,22 +120,20 @@ document.querySelector('form').onsubmit = () =>{
     //  arr.length++
     all.innerText = Number(arr.length) 
     img.addEventListener('click',(e)=>{
+        let n = arr.length.
         li.style.display = 'none'    
         li.remove()
-
-         for(let i = 0; i < arr.length; i++){
-          
            if(arr.length > 0){
-             arr.splice(i,1)
-             console.log(arr.length)
-            all.innerText = Number(arr.length) - 0
+             
+             console.log(arr)
+            
             if(all.innerText == 0){
                 return liToRemove.style.display = 'flex'
             }
            }
           
             
-         }
+         //}
         // all.innerText = Number(arr.length) - 1
          //let clickedElement = e.target;
          
