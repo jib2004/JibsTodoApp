@@ -115,6 +115,14 @@ border-bottom-left-radius: 5px;
     outline: none;
 }
 
+.text-box_light{
+    background-color: hsl(0, 0%, 98%);
+}
+
+input[type="text"]:autofill{
+    border: 3px solid darkorange;
+}
+
 #todo-box{
     /* position: absolute;
     left: 30em;
@@ -196,12 +204,12 @@ input[type="checkbox"]{
     border: 2px solid #cacece;
     }
     .remind li input:checked::before {
-        content: "";
+        content: " ";
         display: inline-block;
         width: 15px; /* adjust the size of the image */
         height: 15px; /* adjust the size of the image */
         background-image: url('images/icon-check.svg'); /* add your image */
-        background-size: cover; /* adjust the size of the image */
+        background-size: contain; /* adjust the size of the image */
         background-repeat: no-repeat; /* adjust the size of the image */
         position: relative; /* adjust the position of the image */
         top: 5px; /* adjust the position of the image */
@@ -209,10 +217,16 @@ input[type="checkbox"]{
       }
 
 .close-img{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    /* background-color: blue; */
     position: absolute;
     top: 28%;
     right: 10px;
+}
+
+
+.close-img:hover{
+    cursor: pointer;
 }
 /* .remind li */
  /* input[type="checkbox"]{
